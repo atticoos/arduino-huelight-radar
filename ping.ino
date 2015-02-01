@@ -17,5 +17,5 @@ void loop () {
   duration = pulseIn(pingPin, HIGH);
   inches = duration / 74 / 2;
   Serial.println(inches);
-  delay(200);
+  delay(50);
 }
