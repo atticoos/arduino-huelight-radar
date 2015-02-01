@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bluebird": "^2.9.4",
+    "lodash": "^3.0.1",
     "node-hue-api": "^1.0.2",
     "serialport": "^1.4.10"
   }
