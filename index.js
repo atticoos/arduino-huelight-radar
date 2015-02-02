@@ -6,7 +6,7 @@ var App = require('./lib/app.js'),
     app;
 
 if (argv.port) {
-  app = new App(argv.port);
+  app = new App(argv.port, argv.debug);
   app.start();
 } else {
   serialPort.list(function (err, ports) {
@@ -22,7 +22,7 @@ if (argv.port) {
       if (isNaN(data) || data > ports.length || data < 1) {
         throw new Error('Invalid selection');
       } else {
-        app = new App(ports[data-1].comName);
+        app = new App(ports[data-1].comName, argv.debug);
         app.start();
       }
     });
